@@ -5,10 +5,11 @@ export const data = [
         name: '',
         profileImg: '',
         profileDesc: '',
+        profileBanner: '',
         likes: 0,
         comments: 0,
         imgPost: '',
-        profileBanner: ''
-
+        postDesc: '',
+        
     }
 ]

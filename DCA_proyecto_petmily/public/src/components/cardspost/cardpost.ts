@@ -1,23 +1,17 @@
 enum Attribute {
-    "uid" = "uid",
     "username" = "username",
     "name" = "name",
     "profileimg" = "profileimg",
-    "profiledesc" = "profiledesc",
-    "likes" = "likes",
-    "comments" = "comments",
+    "postdesc" = "postdesc",
     "imgpost" = "imgpost"
 
 }
 
 class CardPost extends HTMLElement{
-    uid?: number;
     username?: string;
     name?: string;
     profileimg?: string;
-    profiledesc?: string;
-    likes?: number;
-    comments?: number;
+    postdesc?: string;
     imgpost?: string;
 
 
@@ -51,17 +45,17 @@ class CardPost extends HTMLElement{
             <article>
                 <section>
                     <div>
-                        <img ${this.image || "no image"}>
+                        <img ${this.profileimg || "no image"}>
                     </div>
                     <div>
                         <h4>${this.name || "no name"}</h4>
-                        <h5>${this.user || "no user"}</h5>
-                        <p>${this.description || "no description"}</p>
+                        <h5>${this.username || "no user"}</h5>
+                        <p>${this.postdesc || "no description"}</p>
                     </div>
                 </section>
 
                 <div>
-                    <img ${this.post} || "no post">
+                    <img ${this.imgpost} || "no post">
                 </div>
             
             </article>
